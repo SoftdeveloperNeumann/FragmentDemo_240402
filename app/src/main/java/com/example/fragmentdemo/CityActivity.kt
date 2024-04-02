@@ -16,6 +16,8 @@ class CityActivity : AppCompatActivity() {
        binding = ActivityCityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val city = intent.getStringExtra("city")
         binding.tvCity.text = "Die gewählte Stadt ist $city"
 
