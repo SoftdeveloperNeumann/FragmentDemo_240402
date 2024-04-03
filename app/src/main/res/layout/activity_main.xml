@@ -12,29 +12,37 @@
         style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
+        android:layout_marginStart="3dp"
         android:layout_marginBottom="32dp"
+        android:minWidth="100dip"
         android:text="Berlin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/btn_2"
         app:layout_constraintStart_toStartOf="@+id/btn_2" />
 
     <Button
         android:id="@+id/btn_2"
+        style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="278dp"
+        android:minWidth="100dip"
         android:text="Hamburg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_3"
+        style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="32dp"
+        android:minWidth="100dip"
         android:text="Dresden"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toStartOf="@+id/btn_2"
         app:layout_constraintTop_toBottomOf="@+id/btn_2" />
 
