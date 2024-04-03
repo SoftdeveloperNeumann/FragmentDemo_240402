@@ -33,12 +33,26 @@ class MainActivity : AppCompatActivity(), OnClickListener {
 
     override fun onClick(view: View?) {
        if(view is Button){
-           val city = view.text
+           val city = view.text.toString()
 
-           // Aufruf der CityActivity mit Namen der Stadt durch expliziten Intent
-           val intent = Intent(this, CityActivity::class.java)
-           intent.putExtra("city", city)
-           startActivity(intent)
+           if(binding.containerMain == null){ // Portrait
+               // Aufruf der CityActivity mit Namen der Stadt durch expliziten Intent
+               val intent = Intent(this, CityActivity::class.java)
+               intent.putExtra("city", city)
+               startActivity(intent)
+           }else{ //Landscape
+               val fragment = CityFragment()
+               val args = Bundle()
+               args.putString("city",city)
+//               args.putCharSequence("city", city)
+               fragment.arguments = args
+
+               val transaction = supportFragmentManager.beginTransaction()
+               transaction.replace(R.id.container_main,fragment)
+               transaction.commit()
+
+           }
+
        }
     }
 }
